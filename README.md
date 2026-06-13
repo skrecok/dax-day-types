@@ -132,12 +132,12 @@ None of these change the qualitative finding; all of them should temper any prec
 
 ```
 .
+├── figures/
 ├── README.md
 ├── dax_trend_expectancy.py        # session segmentation, trendiness score, follow expectancy
 ├── step1_balance_detectability.py # Section 3: can you predict the day in real time? (AUC)
 ├── step2_fade_backtest.py         # Section 4: unconditional fade expectancy
-├── step2b_fade_sweep.py           # Section 4: fade target-geometry robustness sweep
-└── figures/
+└── step2b_fade_sweep.py           # Section 4: fade target-geometry robustness sweep
 ```
 
 Data via `dukascopy-node`:
