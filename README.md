@@ -26,9 +26,9 @@ One honest caveat: this is a CFD on the index, and its "volume" is tick volume �
 
 ## 1. It starts with a comforting idea: that days have "types"
 
-Almost every retail trading framework rests on one assumption: that a session has a *kind*. A trend day. A range day. A reversal day. Recognize the kind early, switch to the matching playbook, win. Jim Dalton's *Market Profile* alone names six types, and a whole industry teaches you to spot them.
+Almost every retail trading framework rests on one assumption: that a session has a *kind*. A trend day. A range day. A reversal day. The taxonomy itself is old and respectable — in Steidlmayer's *Market Profile*, Jim Dalton names these day-types as a *descriptive* vocabulary, a way to label a session **after** it has formed. That's a fair use, and not what I'm arguing with. The problem is the next move retail makes with it — *recognize the kind early, switch to the matching playbook, win* — which smuggles in two things the descriptive version never claimed: that the types are **discrete** to begin with, and that you can **know which one you're in while it still matters**. This section tests the first; Section 3 tests the second.
 
-There's just one problem. Before you can trade "trend days," trend days have to *exist* as a distinct thing. So I measured it. For each day I took the **share of its daily range captured by the net move** (|net move| ÷ daily range — near 1 when the day went one way cleanly, near 0 when it churned back to where it started), and plotted all 2,669.
+Take the first one. Before you can trade "trend days," they have to *exist* as a distinct thing. So I measured it. For each day I took the **share of its daily range captured by the net move** (|net move| ÷ daily range — near 1 when the day went one way cleanly, near 0 when it churned back to where it started), and plotted all 2,669.
 
 ![Trading days don't come in types](figures/f1_continuum.png)
 
@@ -132,12 +132,12 @@ None of these change the qualitative finding; all of them should temper any prec
 
 ```
 .
-├── figures/
 ├── README.md
 ├── dax_trend_expectancy.py        # session segmentation, trendiness score, follow expectancy
 ├── step1_balance_detectability.py # Section 3: can you predict the day in real time? (AUC)
 ├── step2_fade_backtest.py         # Section 4: unconditional fade expectancy
-└── step2b_fade_sweep.py           # Section 4: fade target-geometry robustness sweep
+├── step2b_fade_sweep.py           # Section 4: fade target-geometry robustness sweep
+└── figures/
 ```
 
 Data via `dukascopy-node`:
